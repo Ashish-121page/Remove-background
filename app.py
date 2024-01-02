@@ -4,6 +4,8 @@ import os
 from werkzeug.utils import secure_filename
 import mysql.connector
 
+# import os
+os.environ["OPENBLAS_L2_SIZE"] = "262144"
 
 app = Flask(__name__)
 
