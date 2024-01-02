@@ -89,6 +89,6 @@ def process_image():
 
         return jsonify({"url": file_url, "filename": processed_filename, "status": "success","response_code": 200})
 
-# Ensure this script is run as the main program and not as a module
-if __name__ == '__main__':
-    app.run(debug=True)
+# # Ensure this script is run as the main program and not as a module
+# if __name__ == '__main__':
+#     app.run(debug=True)
