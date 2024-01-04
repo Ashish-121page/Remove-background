@@ -11,8 +11,8 @@ app = Flask(__name__)
 
 # Function to download u2net.onnx if not present
 def download_u2net_model():
-    model_path = '/path/to/your/models/u2net.onnx'  # Update this path
-    model_url = 'https://github.com/Nkap23/background_removal_AI/raw/main/u2net.onnx'
+    model_path = '/workspace/.u2net/u2net.onnx'  # Update this path
+    model_url = 'https://github.com/danielgatis/rembg/releases/download/v0.0.0/u2net.onnx'
 
     if not os.path.exists(model_path):
         print("Downloading u2net.onnx model...")
@@ -78,6 +78,6 @@ def process_image():
 
         return jsonify({"url": file_url, "filename": processed_filename, "status": "success", "response_code": 200})
 
-# Ensure this script is run as the main program and not as a module
-if __name__ == '__main__':
-    app.run(debug=True)
+# # Ensure this script is run as the main program and not as a module
+# if __name__ == '__main__':
+#     app.run(debug=True)
